@@ -1,0 +1,30 @@
+- @calendar.from_date('2016-07-01'.to_date).by_location('Sentrum Scene').limit(3).each do |e|
+  br = "#{e[:dtstart]} - #{e[:summary]} - #{e[:location]}"
+
+h1 DESC LIMIT 
+- @calendar.sort_desc.limit(2).each do |e|
+  br = "#{e[:dtstart]} - #{e[:summary]} - #{e[:location]}"
+
+h1 BY LOCATION
+- @calendar.by_location('Sentrum Scene').each do |e|
+  br = "#{e[:dtstart]} - #{e[:summary]} - #{e[:location]}"
+
+h1 ALL
+- @calendar.each do |e|
+  br = "#{e[:dtstart]} - #{e[:summary]} - #{e[:location]}"
+
+/ h1 LOCATION
+/ - @place.each do|e|
+/   br = "#{e[:dtstart]} - #{e[:summary]} - #{e[:location]}"
+/ h1 FROM DATE
+/ - @from.each do |e|
+/   br = "#{e[:dtstart]} - #{e[:summary]}"
+/ hr
+/ h1 ASC
+/ - @asc.each do |e|
+/   br = "#{e[:dtstart]} - #{e[:summary]} - #{e[:location]}"
+
+/ hr
+/ h1 DESC
+/ - @desc.each do |e|
+/   br = "#{e[:dtstart]} - #{e[:summary]}"
